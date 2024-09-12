@@ -11,10 +11,10 @@ const VideoComment = ({ videoDetail, channelDetail, id }) => {
             try {
                 const data = await fetchData("commentThreads", {
                     part: "snippet,replies",
-                    videoId: id, // Pass videoId correctly
+                    videoId: id,
                 });
 
-                setComment(data?.items); // Assuming setComment is a state setter function
+                setComment(data?.items);
             } catch (error) {
                 console.error("Error in fetching video comments:", error);
             }
@@ -40,7 +40,7 @@ const VideoComment = ({ videoDetail, channelDetail, id }) => {
             </div>
             <div className="hidden md:block">
                 {comment.map((item) => (
-                    <CommentItem item={item} />
+                    <CommentItem item={item} key={item?.id} />
                 ))}
             </div>
         </div>

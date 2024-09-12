@@ -5,7 +5,7 @@ import { fetchData } from "../../utils/api";
 import { setLoader } from "../../redux/features/appSlice";
 import { Link } from "react-router-dom";
 
-const VideoSuggestion = ({ categoryId }) => {
+const VideoSuggestion = ({ categoryId, id }) => {
     const [videoList, setVideoList] = useState([]);
 
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const VideoSuggestion = ({ categoryId }) => {
                     hl: "en",
                     maxResults: 24,
                     regionCode: "IN",
-                    videoCategoryId: categoryId,
+                    videoCategoryId: "0",
                 });
 
                 setVideoList(data.items);

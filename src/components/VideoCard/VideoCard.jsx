@@ -34,12 +34,12 @@ const VideoCard = ({ item }) => {
     }, []);
 
     return (
-        <div className="my-3">
+        <div className="">
             <div className="aspect-[16/9] sm:rounded-xl">
                 <img
                     src={thumbnails?.standard?.url}
                     alt="Video Thumbnail"
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-cover sm:rounded-xl"
                 />
             </div>
             <div className="flex flex-row mt-3 gap-3  ml-2 sm:ml-0">

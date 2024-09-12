@@ -15,7 +15,6 @@ const ContentItem = () => {
     const [channelDetail, setChannelDetail] = useState([]);
 
     const dispatch = useDispatch();
-
     useEffect(() => {
         window.scrollTo(0, 0);
 
@@ -77,6 +76,7 @@ const ContentItem = () => {
             <div className="col-span-1 flex flex-col sm:mr-12">
                 <VideoSuggestion
                     categoryId={videoDetail[0]?.snippet?.categoryId || 0}
+                    id={id}
                 />
             </div>
         </div>

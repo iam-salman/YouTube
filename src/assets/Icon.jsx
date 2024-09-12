@@ -17,7 +17,7 @@ export const HamBurgerMenu = () => (
 export const YouTubeLogo = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 md:h-6 "
+        className="h-7 md:h-6 "
         viewBox="0 0 90 24"
         focusable="false"
     >
@@ -73,10 +73,10 @@ export const YouTubeLogo = () => (
     </svg>
 );
 
-export const SearchIcon = () => (
+export const SearchIcon = ({ className = "h-7 w-7 md:h-6 md:w-6" }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className={className}
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -130,22 +130,30 @@ export const NotificationIcon = () => (
 );
 
 export const HomeIcon = () => (
+    // <svg
+
+    //     <g>
+    //         <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z" fill="white" />
+    //     </g>
+    // </svg>
+
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-8 w-8 md:h-6 md:w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
-        <g>
-            <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z" fill="white" />
-        </g>
+        <path
+            d="m12 4.44 7 6.09V20h-4v-6H9v6H5v-9.47l7-6.09m0-1.32-8 6.96V21h6v-6h4v6h6V10.08l-8-6.96z"
+            fill="white"
+        ></path>
     </svg>
 );
 
 export const ShortsIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-8 w-8 md:h-6 md:w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -159,7 +167,7 @@ export const ShortsIcon = () => (
 export const SubscriptionIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-8 w-8 md:h-6 md:w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -173,7 +181,7 @@ export const SubscriptionIcon = () => (
 export const YouIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-8 w-8 md:h-6 md:w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -654,3 +662,19 @@ export const ThreeDot = () => (
         ></path>
     </svg>
 );
+
+export const LeftArrow = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-7 w-7"
+            viewBox="0 0 24 24"
+            focusable="false"
+        >
+            <path
+                d="M21 11v1H5.64l6.72 6.72-.71.71-7.93-7.93 7.92-7.92.71.71L5.64 11H21z"
+                fill="white"
+            ></path>
+        </svg>
+    );
+};
