@@ -10,6 +10,8 @@ const Search = () => {
 
     const param = useParams().query;
 
+    console.log(param);
+
     const fetchSearchData = async (query) => {
         try {
             const data = await fetchData("search", {
@@ -28,6 +30,7 @@ const Search = () => {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         fetchSearchData(param);
     }, [param]);
     return (

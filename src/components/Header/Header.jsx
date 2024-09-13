@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Loader from "../../shared/Loader";
 import user from "../../assets/User.png";
-import { toggleMenu } from "../../redux/features/appSlice";
+import {
+    setSearchSuggestion,
+    toggleMenu,
+    setSearch,
+    toggleShowSearch,
+} from "../../redux/features/appSlice";
 
 import {
     Add,
@@ -13,17 +17,16 @@ import {
     SearchIcon,
     YouTubeLogo,
 } from "../../assets/Icon";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import SearchResult from "../../pages/Search/SearchResult";
 import SearchBar from "../../pages/Search/SearchBar";
 
 const Header = () => {
-    const [search, setSearch] = useState("");
-    const [suggestion, setSuggestion] = useState([]);
-    const [showSearch, setShowSearch] = useState(false);
+    const search = useSelector((state) => state.app.search);
+    const showSearch = useSelector((state) => state.app.showSearch);
+    const suggestion = useSelector((state) => state.app.searchSuggestion);
 
     const navigate = useNavigate();
-
     const dispatch = useDispatch();
 
     function fetchSuggestions(query) {
@@ -41,7 +44,7 @@ const Header = () => {
 
                 const suggestions = jsonData[1].map((item) => item[0]);
 
-                setSuggestion(suggestions);
+                dispatch(setSearchSuggestion(suggestions));
             })
             .catch((error) => {
                 console.error("Error fetching suggestions:", error);
@@ -52,7 +55,7 @@ const Header = () => {
     const handleSearch = () => {
         if (search.trim()) {
             navigate(`/results/${search}`);
-            setSearch("");
+            dispatch(setSearch("")); // Clear search input after navigation
         }
     };
 
@@ -64,7 +67,7 @@ const Header = () => {
 
     useEffect(() => {
         if (!search) {
-            setSuggestion([]);
+            dispatch(setSearchSuggestion([]));
             return;
         }
 
@@ -104,7 +107,9 @@ const Header = () => {
                             className="hidden md:block border-2 bg-black border-[#222222] px-5 py-[7px] rounded-l-3xl w-[530px] outline-none focus:border-blue-500"
                             placeholder="Search"
                             value={search}
-                            onChange={(e) => setSearch(e.target.value)}
+                            onChange={(e) =>
+                                dispatch(setSearch(e.target.value))
+                            }
                             onKeyDown={handleKeyDown}
                         />
                         <button
@@ -114,17 +119,12 @@ const Header = () => {
                             <SearchIcon />
                         </button>
                     </div>
-                    {suggestion?.length !== 0 && !showSearch && (
-                        <SearchResult
-                            suggestion={suggestion}
-                            setSearch={setSearch}
-                        />
-                    )}
+                    {suggestion && <SearchResult />}
                 </div>
 
                 <button
                     className="sm:hidden rounded-r-3xl"
-                    onClick={() => setShowSearch((prev) => !prev)}
+                    onClick={() => dispatch(toggleShowSearch())}
                 >
                     <SearchIcon />
                 </button>
@@ -148,18 +148,10 @@ const Header = () => {
             {showSearch && (
                 <div className="bg-[#151515] fixed inset-0 w-full h-full sm:hidden">
                     <SearchBar
-                        search={search}
-                        setSearch={setSearch}
                         handleSearch={handleSearch}
                         handleKeyDown={handleKeyDown}
-                        setShowSearch={setShowSearch}
                     />
-                    {suggestion?.length !== 0 && showSearch && (
-                        <SearchResult
-                            suggestion={suggestion || []}
-                            setSearch={setSearch}
-                        />
-                    )}
+                    {suggestion?.length !== 0 && showSearch && <SearchResult />}
                 </div>
             )}
         </div>

@@ -6,7 +6,7 @@ import MenuBar from "./components/Sidebar/MenuBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoCard from "./components/VideoCard/VideoCard";
 import ContentItem from "./pages/VideoDetail/ContentItem";
-import SearchResult from "./pages/Search/SearchResult";
+import Search from "./components/Search/Search";
 
 const App = () => {
     return (
@@ -27,10 +27,7 @@ const App = () => {
                             }
                         />
                         <Route path="/watch/:id" element={<ContentItem />} />
-                        <Route
-                            path="/results/:query"
-                            element={<SearchResult />}
-                        />
+                        <Route path="/results/:query" element={<Search />} />
                     </Routes>
                 </div>
                 <div className="fixed bottom-0 sm:hidden">
