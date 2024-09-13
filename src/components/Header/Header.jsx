@@ -62,6 +62,7 @@ const Header = () => {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             handleSearch();
+            dispatch(toggleShowSearch());
         }
     };
 
@@ -146,7 +147,7 @@ const Header = () => {
                 </div>
             </div>
             {showSearch && (
-                <div className="bg-[#151515] fixed inset-0 w-full h-full sm:hidden">
+                <div className="bg-[#151515] z-30 fixed inset-0 w-full h-full sm:hidden">
                     <SearchBar
                         handleSearch={handleSearch}
                         handleKeyDown={handleKeyDown}

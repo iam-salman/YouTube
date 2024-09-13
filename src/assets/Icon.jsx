@@ -3,7 +3,7 @@ import React from "react";
 export const HamBurgerMenu = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -90,7 +90,7 @@ export const SearchIcon = ({ className = "h-7 w-7 md:h-6 md:w-6" }) => (
 export const SearchItemIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -104,7 +104,7 @@ export const SearchItemIcon = () => (
 export const UploadVideoIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -118,7 +118,7 @@ export const UploadVideoIcon = () => (
 export const NotificationIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -139,7 +139,7 @@ export const HomeIcon = () => (
 
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -153,7 +153,7 @@ export const HomeIcon = () => (
 export const ShortsIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -167,7 +167,7 @@ export const ShortsIcon = () => (
 export const SubscriptionIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -181,7 +181,7 @@ export const SubscriptionIcon = () => (
 export const YouIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -196,7 +196,7 @@ export const ArrowIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -212,7 +212,7 @@ export const YourChannelIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -228,7 +228,7 @@ export const HistoryIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -246,7 +246,7 @@ export const YourVideosIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -262,7 +262,7 @@ export const WatchLaterIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -278,7 +278,7 @@ export const PlaylistIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -294,7 +294,7 @@ export const LikeIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -310,7 +310,7 @@ export const DisLikeIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -325,7 +325,7 @@ export const DisLikeIcon = () => {
 export const ShareIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -339,7 +339,7 @@ export const ShareIcon = () => (
 export const DownloadIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -354,7 +354,7 @@ export const ArrowUpIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -370,7 +370,7 @@ export const ArrowDownIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -386,7 +386,7 @@ export const TrendingIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -402,7 +402,7 @@ export const ShoppingIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -418,7 +418,7 @@ export const MusicIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -434,7 +434,7 @@ export const MoviesIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -450,7 +450,7 @@ export const LiveIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -468,7 +468,7 @@ export const GamingIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -484,7 +484,7 @@ export const NewsIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -500,7 +500,7 @@ export const SportsIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -516,7 +516,7 @@ export const CoursesIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -532,7 +532,7 @@ export const FashionBeautyIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -548,7 +548,7 @@ export const PodcastIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -564,7 +564,7 @@ export const SettingIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -580,7 +580,7 @@ export const ReportIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -596,7 +596,7 @@ export const HelpIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -612,7 +612,7 @@ export const FeedbackIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 md:h-6 md:w-6"
+            className="h-6 w-6"
             viewBox="0 0 24 24"
             focusable="false"
         >
@@ -627,7 +627,7 @@ export const FeedbackIcon = () => {
 export const MicIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -641,7 +641,7 @@ export const MicIcon = () => (
 export const Add = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >
@@ -652,7 +652,7 @@ export const Add = () => (
 export const ThreeDot = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-9 w-9 md:h-6 md:w-6"
+        className="h-6 w-6"
         viewBox="0 0 24 24"
         focusable="false"
     >

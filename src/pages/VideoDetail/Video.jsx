@@ -5,13 +5,13 @@ import VideoComment from "./VideoComment";
 const Video = ({ id, videoDetail, channelDetail }) => {
     return (
         <div className="">
-            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
+            <div className="relative w-full aspect-[16/9] sm:rounded-xl overflow-hidden">
                 <iframe
                     src={`https://www.youtube.com/embed/${id}?autoplay=1`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-cover sm:rounded-xl"
                 ></iframe>
             </div>
 

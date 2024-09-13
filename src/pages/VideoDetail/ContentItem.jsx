@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Video from "./Video";
 import { setLoader } from "../../redux/features/appSlice";
 import { fetchData } from "../../utils/api";
@@ -8,16 +8,16 @@ import { useParams } from "react-router-dom";
 
 const ContentItem = () => {
     const expand = useSelector((state) => state.app.isExpand);
-
     const { id } = useParams();
 
     const [videoDetail, setVideoDetail] = useState([]);
     const [channelDetail, setChannelDetail] = useState([]);
+    const contentRef = useRef(null); // Create a ref to the container
 
     const dispatch = useDispatch();
-    useEffect(() => {
-        window.scrollTo(0, 0);
 
+    // Fetch video data when the ID changes
+    useEffect(() => {
         const fetchVideoData = async () => {
             dispatch(setLoader());
             try {
@@ -54,11 +54,21 @@ const ContentItem = () => {
             }
         };
 
+        setVideoDetail([]);
+        setChannelDetail([]);
+
         fetchVideoData();
+    }, [id]);
+
+    useEffect(() => {
+        if (contentRef.current) {
+            contentRef.current.scrollTo(0, 0);
+        }
     }, [id]);
 
     return (
         <div
+            ref={contentRef} // Attach the ref to the main container
             className={`${
                 expand ? "md:w-[calc(100%-208px)]" : "md:w-[calc(100%-64px)]"
             } grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 h-screen overflow-y-auto scrollbar-thin sm:px-3 pb-28`}
