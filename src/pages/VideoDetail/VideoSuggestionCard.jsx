@@ -7,7 +7,7 @@ const VideoSuggestionCard = ({ item }) => {
     return (
         <div className="flex flex-col sm:flex-row gap-3 items-start sm:mb-4 py-3 sm:py-0">
             {/* Thumbnail with 16:9 aspect ratio */}
-            <div className="flex-shrink-0 w-full sm:w-40 aspect-[16/9]">
+            <div className="flex-shrink-0 w-full sm:w-40 aspect-video">
                 <img
                     src={thumbnails?.standard?.url}
                     alt={title}

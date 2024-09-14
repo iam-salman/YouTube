@@ -12,11 +12,10 @@ const ContentItem = () => {
 
     const [videoDetail, setVideoDetail] = useState([]);
     const [channelDetail, setChannelDetail] = useState([]);
-    const contentRef = useRef(null); // Create a ref to the container
+    const contentRef = useRef(null);
 
     const dispatch = useDispatch();
 
-    // Fetch video data when the ID changes
     useEffect(() => {
         const fetchVideoData = async () => {
             dispatch(setLoader());
@@ -74,7 +73,7 @@ const ContentItem = () => {
             } grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 h-screen overflow-y-auto scrollbar-thin sm:px-3 pb-28`}
         >
             {/* Video component - 2fr part */}
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-2 col-span-1">
                 <Video
                     id={id}
                     videoDetail={videoDetail}
@@ -83,9 +82,9 @@ const ContentItem = () => {
             </div>
 
             {/* VideoSuggestion component - 1fr part */}
-            <div className="col-span-1 flex flex-col sm:mr-12">
+            <div className="col-span-1 flex sm:mr-12">
                 <VideoSuggestion
-                    categoryId={videoDetail[0]?.snippet?.categoryId || 0}
+                    categoryId={videoDetail[0]?.snippet?.categoryId}
                     id={id}
                 />
             </div>

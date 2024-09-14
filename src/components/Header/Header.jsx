@@ -120,7 +120,7 @@ const Header = () => {
                             <SearchIcon />
                         </button>
                     </div>
-                    {suggestion && <SearchResult />}
+                    {suggestion.length !== 0 && <SearchResult />}
                 </div>
 
                 <button

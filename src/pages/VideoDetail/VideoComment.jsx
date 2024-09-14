@@ -5,7 +5,7 @@ import user from "../../assets/User.png";
 
 const VideoComment = ({ videoDetail, channelDetail, id }) => {
     const [comment, setComment] = useState([]);
-    console.log(comment);
+
     useEffect(() => {
         const fetchCommentThread = async (id) => {
             try {

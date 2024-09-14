@@ -14,7 +14,6 @@ const SearchCard = ({ item }) => {
 
     return (
         <div className="flex flex-col sm:flex-row gap-5 items-start sm:mb-4 py-3 sm:py-0">
-            {/* Thumbnail with 16:9 aspect ratio */}
             <div className="flex-shrink-0 w-full sm:w-[500px] aspect-[16/9]">
                 <img
                     src={thumbnails?.high?.url}
@@ -23,7 +22,6 @@ const SearchCard = ({ item }) => {
                 />
             </div>
 
-            {/* Video details */}
             <div className="sm:flex flex-col gap-3 px-3 sm:px-0 h-16 hidden">
                 <div className="flex flex-col gap-2">
                     <div className="text-lg  truncate-2-lines">{title}</div>
