@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoCard from "./components/VideoCard/VideoCard";
 import ContentItem from "./pages/VideoDetail/ContentItem";
 import Search from "./components/Search/Search";
+import Category from "./pages/Category/Category";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                     <SideBar />
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/:category" element={<Category />} />
                         <Route
                             path="/video/:id"
                             element={
@@ -28,6 +30,8 @@ const App = () => {
                         />
                         <Route path="/watch/:id" element={<ContentItem />} />
                         <Route path="/results/:query" element={<Search />} />
+                        <Route path="*" element={<Home />} />{" "}
+                        {/* Catch-all route */}
                     </Routes>
                 </div>
                 <div className="fixed bottom-0 sm:hidden">

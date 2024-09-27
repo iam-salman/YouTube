@@ -14,13 +14,14 @@ const SideBar = () => {
             {expand ? (
                 <div className="w-52 pb-14">
                     {categories.map((item, index) => (
-                        <div
-                            key={index}
-                            className="w-full flex items-center gap-6 px-3 py-2 hover:bg-[#222222] rounded-lg"
-                        >
-                            {item.icon}
-                            <p className="text-sm font-medium">{item.name}</p>
-                        </div>
+                        <Link to={`/${item?.name}`} key={index}>
+                            <div className="w-full flex items-center gap-6 px-3 py-2 hover:bg-[#222222] rounded-lg">
+                                {item.icon}
+                                <p className="text-sm font-medium">
+                                    {item.name}
+                                </p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             ) : (
